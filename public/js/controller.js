@@ -67,7 +67,6 @@ function turnOffLoginAndCreateAccountBoxByClick(){
 	for(let i = 0, n = loginEscapeButtons.length; i < n; i++){
 		loginEscapeButtons[i].addEventListener('click', function(){
 			signInBox.style.display = "none";
-			createAccountBox.style.display = "none";
 		})
 	}
 }
