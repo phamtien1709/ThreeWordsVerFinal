@@ -36,7 +36,7 @@ body{
 }
 .menu-list > li {
 	display: inline-flex;
-	line-height: 40px;
+	line-height: 45px;
 	list-style: none;
 	text-align: center;
 }
@@ -97,6 +97,25 @@ body{
 	font-size: 20px;
 }
 #open-sign-in-button:hover{
+	cursor: pointer;
+	background-color: #ffffff;
+	color: #ffa31a;
+}
+#sign-out-button{
+	display: none;
+    align-items: center;
+    background-color: #ffa31a;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 3px 10px;
+}
+#sign-out-button > span{
+	font-size: 20px;
+}
+#sign-out-button:hover{
 	cursor: pointer;
 	background-color: #ffffff;
 	color: #ffa31a;
@@ -166,20 +185,5 @@ body{
 	}
 	.menu-option .fa{
 		font-size: 1.7em;
-	}
-	.search{
-		display: none;
-		position: absolute;
-		top: 40px;
-		right: 130px;
-	}
-	#search-input{
-		display: inline-flex;
-		padding: 8px 32px 8px 8px;
-		border-radius: 0px;
-		border: 3px solid #ffffff;
-	}
-	.search-notation{
-		display: inline-block;
 	}
 }
