@@ -2,16 +2,26 @@
 <html>
 
 <head>
-	<title>Anonymous view</title>
+	<title>Three Words</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Dancing+Script" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico" rel="stylesheet">
+	<link rel="shortcut icon" href="img/logo3word.png" type="favicon/ico" />
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="js/endlessScrolling.js"></script>
+	<script type="text/javascript" src="js/facebook.js"></script>
+	
 	<link rel="stylesheet" type="text/css" href="css/menuStyle.css">
 	<link rel="stylesheet" type="text/css" href="css/contentStyle.css">
 	<link rel="stylesheet" type="text/css" href="css/loginStyle.css">
 	<link rel="stylesheet" type="text/css" href="css/createAccountStyle.css">
 	<link rel="stylesheet" type="text/css" href="css/openPictureStyle.css">
+
 </head>
 
 <body>
@@ -30,11 +40,13 @@
 				<div class="right-dock">
 					<div id="open-sign-in-button">
 						<span class="fa fa-sign-in"></span>
-						Sign in
+						<div class="text-sign-in">Sign in</div>
 					</div>
-					<div id="sign-out-button">
+					<div><img id="ava-tiny" alt=""></div>
+					<div id="headbar-name-user"></div>
+					<div id="sign-out-button" onclick="logoutFB()">
 						<span class="fa fa-sign-out"></span>
-						Log out
+						<div class="text-log-out">Log out</div>
 					</div>
 				</div>
 			</div>
@@ -63,13 +75,8 @@
 		</div>
 	</div>
 	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/controller.js"></script>
 	<script type="text/javascript" src="js/bigPicture.js"></script>
-	<script type="text/javascript" src="js/endlessScrolling.js"></script>
-	<script type="text/javascript" src="js/facebook.js"></script>
 </body>
 
 </html>

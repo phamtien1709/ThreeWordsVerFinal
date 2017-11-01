@@ -61,6 +61,11 @@ function testAPI() {
   FB.api('/me', function (userInfo) {
     // console.log(userInfo);
     currentUser = userInfo;
+    // console.log(currentUser);
+    document.getElementById("ava-tiny").src = `https://graph.facebook.com/${currentUser.id}/picture?width=15`;
+    document.getElementById("headbar-name-user").textContent += `Hi, ${currentUser.name}`;
+    document.getElementById("ava-tiny").style.display = "";
+    document.getElementById("headbar-name-user").display = "";
     $.ajax({ type: "post", url: "/user/createAccount", data: userInfo })
       .done((data) => {
         currentUser = data;
@@ -68,8 +73,24 @@ function testAPI() {
   });
 }
 
+function logoutFB() {
+  FB.logout(function(response) {
+    // Person is now logged out
+    // console.log("logout");
+    turnOffLogOutBox();
+  });
+}
+
 function turnOffLoginBox() {
   document.getElementById("open-sign-in-button").style.display = "none";
   document.getElementById("sign-out-button").style.display = "flex";
   document.getElementById("login-box").style.display = "none";
+}
+
+function turnOffLogOutBox(){
+  document.getElementById("sign-out-button").style.display = "none";
+  document.getElementById("open-sign-in-button").style.display = "flex";
+  document.getElementById("login-box").style.display = ""; 
+  document.getElementById("ava-tiny").style.display = "none";
+  document.getElementById("headbar-name-user").style.display = "none";
 }

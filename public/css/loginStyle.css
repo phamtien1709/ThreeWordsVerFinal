@@ -63,26 +63,7 @@
 	margin-bottom: 10px;
 }
 
-.login-button-wrapper{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	margin-top: 5px;
-}
 
-#login-submit-button{
-	flex-basis: 100px;
-}
-
-
-
-.login-box-button-style:hover{
-	cursor: pointer;
-	border: 2px solid #d632ff;
-	background-color: #ffffff;
-	color: #d632ff;
-}
 
 div.strikeThrough{
 	position: relative;
@@ -97,4 +78,27 @@ div.strikeThrough{
 
 .line-through {
 	text-decoration: line-through;
+}
+
+#ava-tiny {
+	border-radius: 100%;
+	padding: 0 5px 0 5px;
+}
+
+#headbar-name-user {
+	padding: 0 5px 0 5px;
+	font-weight: bold;
+	color: #ffa31a; 
+}
+
+@media screen and (max-width: 640px) {
+	.text-sign-in {
+		display: none;
+	}
+	.text-log-out{
+		display: none;
+	}
+	#headbar-name-user {
+		display: none;
+	}	
 }
